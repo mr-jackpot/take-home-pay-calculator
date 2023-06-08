@@ -5,5 +5,5 @@
 - Full test coverage
 
 ### Current state:
-<img width="707" alt="Screenshot 2023-06-05 at 19 44 54" src="https://github.com/mr-jackpot/take-home-pay-calculator/assets/18235528/f5d51bce-96ad-4dba-9bb5-d829242c740a">
+<img width="666" alt="image" src="https://github.com/mr-jackpot/take-home-pay-calculator/assets/18235528/938a07b1-1b79-4529-bc0f-cf96ffe7a0d7">
 
