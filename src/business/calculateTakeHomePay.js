@@ -19,14 +19,12 @@ const calculate = async (country, salary) => {
         }
         if (band.end < money) {
             result += (band.end - band.start) * band.rate;
-            money -= (band.end - band.start);
         } else {
             result += (money - band.start) * band.rate;
-            money = 0;
             skip = true;
         }
     });
-    return result;
+    return result.toFixed(2);
 };
 
 export default calculate;
