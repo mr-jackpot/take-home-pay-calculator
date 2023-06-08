@@ -1,5 +1,6 @@
 import React from "react";
 import {Box, Slider} from "@mui/material";
+import './BaseSalary.css';
 
 const marks = [
     {
@@ -16,7 +17,7 @@ const marks = [
     },
 ];
 const BaseSalary = (props) => {
-    const [value, setValue] = React.useState(35000);
+    const [value, setValue] = React.useState(0);
 
     const handleSliderChange = (event, newValue) => {
         setValue(newValue);
@@ -24,13 +25,14 @@ const BaseSalary = (props) => {
     }
 
     return (
-        <Box sx={{width: 400}}>
+        <Box className={"base-salary-container"} sx={{width: 400}}>
+            <p className={"box-title"}>Base Salary</p>
             <Slider
                 marks={marks}
                 defaultValue={35000}
                 min={0}
                 max={100000}
-                step={1000}
+                step={250}
                 valueLabelDisplay="auto"
                 value={value}
                 onChange={handleSliderChange}
