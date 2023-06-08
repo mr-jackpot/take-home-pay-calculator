@@ -3,7 +3,7 @@ import Stack from "@mui/material/Stack";
 import "./Main.css";
 import TakeHomePay from "../components/take-home-pay/TakeHomePay";
 import BaseSalary from "../components/base-salary/BaseSalary";
-import calculate from "../business/calculateTakeHomePay";
+import calculateTakeHome from "../business/calculateTakeHomePay";
 
 const Main = () => {
     const [salary, setSalary] = React.useState(0);
@@ -12,7 +12,7 @@ const Main = () => {
         setSalary(salary);
     }
     useEffect(() => {
-        calculate('SCOTLAND', salary).then((result) => {
+        calculateTakeHome('SCOTLAND', salary).then((result) => {
             setTakeHomePay(result);
         });
     }, [salary]);

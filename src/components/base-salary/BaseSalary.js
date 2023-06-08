@@ -32,7 +32,7 @@ const BaseSalary = (props) => {
                 defaultValue={35000}
                 min={0}
                 max={100000}
-                step={1000}
+                step={250}
                 valueLabelDisplay="auto"
                 value={value}
                 onChange={handleSliderChange}
