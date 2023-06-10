@@ -5,7 +5,7 @@ import './TakeHomePay.css';
 const TakeHomePay = (props) => {
     return (
         <Box className={"pay-container"}>
-            £{props.pay}
+            <p className={"box-title"}>£{props.pay}</p>
         </Box>
     );
 }
