@@ -1,5 +1,5 @@
 import React from "react";
-import {Grid, TextField} from "@mui/material";
+import {Grid, OutlinedInput, InputAdornment} from "@mui/material";
 import './AdditionalPayments.css';
 
 const AdditionalPayments = (props) => {
@@ -11,13 +11,21 @@ const AdditionalPayments = (props) => {
               className={"additional-payments-container"}
               spacing={2}
               sx={{width: 500}}>
-            <Grid item>
-                <p> hI </p>
-                <TextField/>
+            <Grid item textAlign={"center"}>
+                <p className={"box-title"}> Annual Bonus/Awards </p>
+                <OutlinedInput
+                    startAdornment={<InputAdornment position="start">£</InputAdornment>}
+                    sx={{width: 300}}
+                    type={"number"}
+                />
             </Grid>
-            <Grid item>
-                <p> hI </p>
-                <TextField/>
+            <Grid item textAlign={"center"}>
+                <p className={"box-title"}> Overtime </p>
+                <OutlinedInput
+                    startAdornment={<InputAdornment position="start">£</InputAdornment>}
+                    sx={{width: 300}}
+                    type={"number"}
+                />
             </Grid>
         </Grid>
     )
