@@ -11,27 +11,30 @@ const Main = () => {
     const [salary, setSalary] = React.useState(0);
     const [pension, setPension] = React.useState(0);
     const [takeHomePay, setTakeHomePay] = React.useState(0);
-    const sendSalary = (salary) => {
-        setSalary(salary);
+    const [bonus, setBonus] = React.useState(0);
+    const [overtime, setOvertime] = React.useState(0);
+
+    const sendSalary = (s) => {
+        setSalary(s)
     };
 
-    const sendPension = (pension) => {
-        setPension(pension);
+    const sendPension = (p) => {
+        setPension(p)
     };
 
-    const sendBonus = (bonus) => {
-        setSalary(salary + bonus);
-    }
+    const sendBonus = (b) => {
+        setBonus(b)
+    };
 
-    const sendOvertime = (overtime) => {
-        setSalary(salary + overtime);
-    }
+    const sendOvertime = (o) => {
+        setOvertime(o)
+    };
 
     useEffect(() => {
-        calculateTakeHome('SCOTLAND', salary, pension).then((result) => {
+        calculateTakeHome('SCOTLAND', salary, pension, bonus, overtime).then((result) => {
             setTakeHomePay(result);
         });
-    }, [salary, pension]);
+    }, [salary, pension, bonus, overtime]);
 
     return (
         <div className={"stack-container"}>
