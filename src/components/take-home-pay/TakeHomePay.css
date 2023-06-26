@@ -1,4 +1,12 @@
 .pay-container {
     text-align: center;
-    background-color: rgba(72, 61, 139, 0.3);
+    background-color: rgba(250, 2, 2, 0.5);
+}
+
+.box-title {
+    color: black;
+}
+
+#pay-value {
+    font-size: 4rem;
 }
