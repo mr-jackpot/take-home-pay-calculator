@@ -8,12 +8,12 @@ const marks = [
         label: '£0',
     },
     {
-        value: 50000,
-        label: '£50,000',
+        value: 62500,
+        label: '£62,500',
     },
     {
-        value: 100000,
-        label: '£100,000',
+        value: 125000,
+        label: '£125,000',
     },
 ];
 const BaseSalary = (props) => {
@@ -31,7 +31,7 @@ const BaseSalary = (props) => {
                 marks={marks}
                 defaultValue={35000}
                 min={0}
-                max={100000}
+                max={125000}
                 step={250}
                 valueLabelDisplay="auto"
                 value={value}

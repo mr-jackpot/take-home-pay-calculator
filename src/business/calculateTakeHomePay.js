@@ -1,7 +1,7 @@
 import countryCodes from '../data/countryCodes.json';
 
-const calculateTakeHome = async (country, salary, pension) => {
-    salary = salary - (salary * (pension / 100));
+const calculateTakeHome = async (country, salary, pension, bonus, overtime) => {
+    salary = salary + bonus + overtime - (salary * (pension / 100));
     const json = await jsonSearcher('name', country.toUpperCase());
     const tax = calculateTax(json.tax, salary);
     const nic = calculateNic(json.nic, salary);
