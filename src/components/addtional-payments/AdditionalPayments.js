@@ -8,12 +8,12 @@ const AdditionalPayments = (props) => {
     const [overtime, setOvertime] = React.useState(0);
     const bonusValueChange = (e) => {
         setBonus(e);
-        props.sendBonus(e);
+        props.sendBonus(e ? parseInt(e) : 0);
     }
 
     const overtimeValueChange = (e) => {
         setOvertime(e);
-        props.sendOvertime(e);
+        props.sendOvertime(e ? parseInt(e) : 0);
     }
 
     return (
@@ -32,6 +32,7 @@ const AdditionalPayments = (props) => {
                     type={"number"}
                     value={bonus}
                     onChange={(e) => bonusValueChange(e.target.value)}
+                    onWheel={e => e.target.blur()}
                 />
             </Grid>
             <Grid item textAlign={"center"}>
@@ -42,6 +43,7 @@ const AdditionalPayments = (props) => {
                     type={"number"}
                     value={overtime}
                     onChange={(e) => overtimeValueChange(e.target.value)}
+                    onWheel={e => e.target.blur()}
                 />
             </Grid>
         </Grid>
